@@ -8,10 +8,10 @@ microcode: Microcode
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.microcode](https://galaxy.ansible.com/devops-toolbox.microcode)
+[https://galaxy.ansible.com/devopstoolbox.microcode](https://galaxy.ansible.com/devopstoolbox.microcode)
 
 ```bash
-ansible-galaxy install devops-toolbox.microcode
+ansible-galaxy install devopstoolbox.microcode
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: microcode is configured
       import_role:
-        name: devops-toolbox.microcode
+        name: devopstoolbox.microcode
       vars:
         microcode_packages_state: present
         microcode_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
