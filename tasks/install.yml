@@ -1,0 +1,27 @@
+---
+# Install microcode packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ microcode_packages_remove }}"
+    state: absent
+  become: true
+  when: microcode_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ microcode_packages_repos }}"
+    state: "{{ microcode_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ microcode_packages_prereq }}"
+    state: "{{ microcode_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ microcode_packages_install }}"
+    state: "{{ microcode_packages_state }}"
+  become: true

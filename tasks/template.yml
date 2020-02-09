@@ -1,0 +1,10 @@
+---
+# Template configuration files for microcode
+
+- name: template is copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  become: true
+  loop: "{{ microcode_templates_copy }}"
+  when: microcode_copy_templates

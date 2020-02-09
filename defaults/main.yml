@@ -1,0 +1,19 @@
+---
+# defaults file for microcode
+
+microcode_packages_state: present
+microcode_remove_packages: true
+microcode_enable_service: true
+microcode_enable_selinux: true
+microcode_copy_templates: true
+microcode_firewall_configure: true
+microcode_firewall_rules:
+  - service: ssh
+  - port: 3389
+microcode_users:
+  - user: devops
+    group: docker
+microcode_selinux_booleans:
+  - name: ftp_home_dir
+    state: true
+    persistent: true
